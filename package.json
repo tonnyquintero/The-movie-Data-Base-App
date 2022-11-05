@@ -1,0 +1,20 @@
+{
+  "name": "the-movie-data-base-app",
+  "version": "1.0.0",
+  "description": "An app build in js using fetch, node and axios.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tonnyquintero/The-movie-Data-Base-App.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/tonnyquintero/The-movie-Data-Base-App/issues"
+  },
+  "homepage": "https://github.com/tonnyquintero/The-movie-Data-Base-App#readme"
+}
