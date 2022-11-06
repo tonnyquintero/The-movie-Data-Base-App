@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "An app build in js using fetch, node and axios.",
   "main": "index.js",
+
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
