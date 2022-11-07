@@ -234,6 +234,14 @@ button {
   width: 8px;
   height: 8px;
 }
+#id10759 { --idColor: var(--red); }
+#id10764 { --idColor: var(--lightBlue); }
+#id10766 { --idColor: var(--green); }
+#id10768 { --idColor: var(--darkBlue); }
+#id10762 { --idColor: var(--lightBlue); }
+#id10767 { --idColor: var(--purple-dark-1); }
+#id10765 { --idColor: var(--yellow); }
+#id10763 { --idColor: var(--red); }
 #id28 { --idColor: var(--yellow); }
 #id12 { --idColor: var(--red); }
 #id16 { --idColor: var(--green); }
