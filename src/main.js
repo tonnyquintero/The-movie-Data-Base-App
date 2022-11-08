@@ -11,7 +11,7 @@ const api = axios.create({
     }
 });
 
-async function getTrendingMoviesPreview() {
+export async function getTrendingMoviesPreview() {
     const { data } = await api('trending/tv/day?')
     const series = data.results;
 
@@ -33,7 +33,7 @@ async function getTrendingMoviesPreview() {
     });
 }
 
-async function getCategoriesMoviesPreview() {
+export async function getCategoriesMoviesPreview() {
     const { data } = await api('genre/tv/list?' + '&language=es')
 
     const categories = data.genres;
@@ -56,5 +56,3 @@ async function getCategoriesMoviesPreview() {
     });
 }
 
-getTrendingMoviesPreview();
-getCategoriesMoviesPreview()
