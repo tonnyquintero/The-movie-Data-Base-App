@@ -23,10 +23,10 @@ export async function getTrendingMoviesPreview() {
     const { data } = await api('trending/tv/day?')
     const series = data.results;
 
-    series.forEach(serie => {
-        const trendingMoviesPreviewList = document.querySelector
-        ('#trendingPreview .trendingPreview-movieList')
+    trendingMoviesPreviewList.innerHTML = '';
 
+    series.forEach(serie => {
+        
         const movieContainer = document.createElement('div')
         movieContainer.classList.add('movie-container')
 
@@ -46,10 +46,10 @@ export async function getCategoriesMoviesPreview() {
 
     const categories = data.genres;
 
-    categories.forEach(category => {
-        const categoriesPreviewList = document.querySelector
-        ('#categoriesPreview .categoriesPreview-list')
+    categoriesPreviewList.innerHTML = '';
 
+    categories.forEach(category => {
+       
         const categoryContainer = document.createElement('div')
         categoryContainer.classList.add('category-container')
 
