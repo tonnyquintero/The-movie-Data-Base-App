@@ -1,4 +1,12 @@
 import {API_KEY} from "./secret.js";
+import { headerSection, trendingPreviewSection,
+    categoriesPreviewSection, genericSection,
+    movieDetailSection, searchForm,
+    trendingMoviesPreviewList, categoriesPreviewList,
+    movieDetailCategoriesList, relatedMoviesContainer,
+    headerTitle, arrowBtn, headerCategoryTitle, 
+    searchFormInput, searchFormBtn, trendingBtn,
+    movieDetailTitle, movieDetailDescription, movieDetailScore } from './nodes.js'
 
 const api = axios.create({
     baseURL: 'https://api.themoviedb.org/3/',
@@ -16,7 +24,7 @@ export async function getTrendingMoviesPreview() {
     const series = data.results;
 
     series.forEach(serie => {
-        const trendingPreviewMoviesContainer = document.querySelector
+        const trendingMoviesPreviewList = document.querySelector
         ('#trendingPreview .trendingPreview-movieList')
 
         const movieContainer = document.createElement('div')
@@ -29,7 +37,7 @@ export async function getTrendingMoviesPreview() {
         + serie.poster_path);
 
         movieContainer.appendChild(movieImg)
-        trendingPreviewMoviesContainer.appendChild(movieContainer)
+        trendingMoviesPreviewList.appendChild(movieContainer)
     });
 }
 
@@ -39,7 +47,7 @@ export async function getCategoriesMoviesPreview() {
     const categories = data.genres;
 
     categories.forEach(category => {
-        const previewCategoriesContainer = document.querySelector
+        const categoriesPreviewList = document.querySelector
         ('#categoriesPreview .categoriesPreview-list')
 
         const categoryContainer = document.createElement('div')
@@ -52,7 +60,7 @@ export async function getCategoriesMoviesPreview() {
 
         categoryTitle.appendChild(categoryTitleText)
         categoryContainer.appendChild(categoryTitle)
-        previewCategoriesContainer.appendChild(categoryContainer)
+        categoriesPreviewList.appendChild(categoryContainer)
     });
 }
 

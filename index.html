@@ -14,16 +14,19 @@
 <header id="header" class="header-container">
 <span class="header-arrow inactive">&lt;</span>
 <h1 class="header-title">PlatziMovies</h1>
-<h1 class="header-title header-title--categoryView inactive">Acción</h1>
+<h1 class="header-title header-title--categoryView inactive">
+  Acción</h1>
+
+
 <form id="searchForm" class="header-searchForm">
 <input type="text" placeholder="Game of Thrones" />
-<button>🔍</button>
+<button id="searchBtn">🔍</button>
 </form>
 </header>
 <section id="trendingPreview" class="trendingPreview-container">
 <div class="trendingPreview-header">
 <h2 class="trendingPreview-title">Tendencias</h2>
-<button class="trendingPreview-btn">Ver más</button>
+<button class="trendingPreview-btn" id="trendingPreview-btn">Ver más</button>
 </div>
 <article class="trendingPreview-movieList">
 <!-- <div class="movie-container">
@@ -116,6 +119,7 @@ Wisecracking mercenary Deadpool battles the evil and powerful Cable and other ba
 
 <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
 <script type="module" src="./src/secret.js"></script>
+<script type="module" src="./src/nodes.js"></script>
 <script type="module" src="./src/main.js"></script>
 <script type="module" src="./src/navigation.js"></script>
 </body>
