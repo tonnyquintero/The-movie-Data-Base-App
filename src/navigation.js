@@ -1,4 +1,4 @@
-import { getTrendingMoviesPreview, getCategoriesMoviesPreview } from  './main.js'
+import { getTrendingMoviesPreview, getCategoriesMoviesPreview, getMoviesByCategory } from  './main.js'
 import { arrowBtn, categoriesPreviewSection, 
         genericSection, headerCategoryTitle, headerSection, 
         headerTitle, movieDetailSection, searchForm, 
@@ -73,6 +73,16 @@ function categoriesPage() {
   categoriesPreviewSection.classList.add('inactive');
   genericSection.classList.remove('inactive');
   movieDetailSection.classList.add('inactive');
+
+  const [_, categoryData] = location.hash.split('=')
+  const [categoryId, categoryName] = categoryData.split('-');
+  const newName = categoryName.replaceAll('%20', ' ');
+  const newName2 = newName.replace('%C3%B3', 'ó');
+  const newName3 = newName2.replace('Sci', 'Ciencia Ficción')
+
+
+  headerCategoryTitle.innerHTML = newName3;
+  getMoviesByCategory(categoryId);
 }
 
 function movieDetailsPage() {
